@@ -105,7 +105,6 @@ def index():
     event = [events.to_dict() for events in Event.query.all()]
     return render_template('index.html', events=event)
 
-
 @app.route('/create', methods=['GET', 'POST'])
 def create():
     form = Events()
@@ -128,7 +127,6 @@ def create():
 def success():
     massage = f'Event successfully added'
     return render_template('success page.html', massage=massage)
-
 
 
 with app.app_context():
